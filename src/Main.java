@@ -19,7 +19,6 @@ public class Main {
         System.out.println("What fill character would you like to use?");
         String character = sc.next( );
         int baseLength = 1;
-
         while (baseLength < size) {
 
         }
