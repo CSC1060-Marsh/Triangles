@@ -18,11 +18,41 @@ public class Main {
 
         System.out.println("What fill character would you like to use?");
         String character = sc.next( );
-        int baseLength = 1;
 
         boolean repeat = true;
 
-        //NEED THE PRINTING PART
+        int currentRow = 1;
+        int numberSpaces = size - currentRow;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         System.out.println("Would you like another triangle (Y/N) ?");
         String yesOrNo = sc.nextLine();
