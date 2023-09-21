@@ -19,8 +19,16 @@ public class Main {
         System.out.println("What fill character would you like to use?");
         String character = sc.next( );
         int baseLength = 1;
-        while (baseLength < size) {
 
-        }
+        boolean repeat = true;
+
+        //NEED THE PRINTING PART
+
+        System.out.println("Would you like another triangle (Y/N) ?");
+        String yesOrNo = sc.nextLine();
+
+        if (yesOrNo == "Y") {
+            repeat = true;
+        } else repeat = false;
         }
     }
