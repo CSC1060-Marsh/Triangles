@@ -20,30 +20,40 @@ public class Main {
         String character = sc.next( );
 
         boolean repeat = true;
-
         int currentRow = 1;
-        int numberSpaces = size - currentRow;
+        int numberSpaces = 1;
+        int numberCharacters = 1;
+        int lineSize = 1;
+        int charactersInARow = 1;
+        String characterPrint = character + " ";
 
 
+        //while (lineSize <= size) {
+            //while (numberSpaces < size) {
+               // System.out.print(" ");
+               // numberSpaces = numberSpaces + 1;
+           // }
+
+            //numberSpaces = 1;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            while (numberCharacters <= lineSize) {
+                if (numberCharacters > 1) {
+                    while (numberSpaces < (size - 1)) {
+                        System.out.print(" ");
+                        numberSpaces = numberSpaces + 1;
+                    }
+                    while (charactersInARow < numberCharacters) {
+                        System.out.print(characterPrint);
+                        charactersInARow = charactersInARow + 1;
+                    }
+                } else {
+                    System.out.print(character + "\n");
+                }
+                numberCharacters = numberCharacters + 1;
+            }
+            //lineSize = lineSize + 1;
+        //}
 
 
 
