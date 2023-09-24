@@ -6,9 +6,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        boolean repeat = true;
+        int size;
+
+        while (repeat = true) {
+
         System.out.println("What size would you like the triangle to be?");
 
-        int size = Integer.parseInt(sc.nextLine());
+        size = sc.nextInt();
 
         while (size > 50 || size < 1) {
             System.out.println("That's not within the bounds. Please enter a number between one and fifty.");
@@ -17,58 +22,44 @@ public class Main {
         }
 
         System.out.println("What fill character would you like to use?");
-        String character = sc.next( );
-
-        boolean repeat = true;
-        int currentRow = 1;
-        int numberSpaces = 1;
-        int numberCharacters = 1;
-        int lineSize = 1;
-        int charactersInARow = 1;
-        String characterPrint = character + " ";
+        String character = sc.next();
 
 
-        //while (lineSize <= size) {
-            //while (numberSpaces < size) {
-               // System.out.print(" ");
-               // numberSpaces = numberSpaces + 1;
-           // }
 
-            //numberSpaces = 1;
+            int currentRow = 1;
+            int numberOfCharacters = 1;
+
+            //width is size * 2 - 1
+            int width = size * 2 - 1;
+            //num chars increases by 2
+
+            int initialWidth = 1;
+            //width increases by 2 each time
+
+            int numberOfSpaces = ((width - initialWidth) / 2) - 1;
 
 
-            while (numberCharacters <= lineSize) {
-                if (numberCharacters > 1) {
-                    while (numberSpaces < (size - 1)) {
-                        System.out.print(" ");
-                        numberSpaces = numberSpaces + 1;
-                    }
-                    while (charactersInARow < numberCharacters) {
-                        System.out.print(characterPrint);
-                        charactersInARow = charactersInARow + 1;
-                    }
-                } else {
-                    System.out.print(character + "\n");
+            for (currentRow = 1; currentRow <= size; currentRow++) {
+                for (numberOfSpaces = ((width - initialWidth) / 2) - 1; numberOfSpaces >= 0; numberOfSpaces--) {
+                    System.out.print(" ");
                 }
-                numberCharacters = numberCharacters + 1;
+                for (numberOfCharacters = 1; numberOfCharacters <= currentRow; numberOfCharacters++) {
+                    System.out.print(character + " ");
+                }
+                System.out.println();
+                initialWidth = initialWidth + 2;
             }
-            //lineSize = lineSize + 1;
-        //}
 
+            System.out.println("Would you like another triangle (Y/N)?");
 
+            String yesOrNo = sc.next();
 
+            if (yesOrNo == "Y") {
+                repeat = true;
+            } else {
+                repeat = false;
+            }
 
-
-
-
-
-
-
-        System.out.println("Would you like another triangle (Y/N) ?");
-        String yesOrNo = sc.nextLine();
-
-        if (yesOrNo == "Y") {
-            repeat = true;
-        } else repeat = false;
+        }
         }
     }
