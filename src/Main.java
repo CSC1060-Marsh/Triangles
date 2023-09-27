@@ -11,7 +11,7 @@ public class Main {
         //This defines the integer "size".
         int size;
         //This starts the repeat looping sequence.
-        while (repeat = true) {
+        while (repeat == true) {
             //This asks the user to input a triangle size.
         System.out.println("What size would you like the triangle to be?");
         //This defines "size" as the next input.
@@ -61,7 +61,7 @@ public class Main {
             //This defines the string "yesOrNo" as their input.
             String yesOrNo = sc.next();
             //This starts an "if" sequence determining the loop response.
-            if (yesOrNo == "Y") {
+            if (yesOrNo.equals("Y")) {
                 //This keeps the repeat as true if the above is true.
                 repeat = true;
                 //This starts the "else" statement.
